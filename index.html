@@ -1,1 +1,24 @@
-O HAI
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="wh.png" height="200">
+<h1>WELCOME TO THE WHITE HOUSE!  <h1>
+<img src="kc.jpg" height="100">
+<h2>Want an alt fact? Request a press conference!<h2>
+
+<button type="button" onclick="getFact()">Click To Attend Press Conference</button>
+
+<p id="fact"></p>
+
+<script>
+function getFact() {
+	var items = ["A koala's appendix is NUM millimeters long.","Scientists estimate that at least NUM narhwals are lesbian.","Trump's inauguration was attended by NUM people.","At least NUM murders in Chicago last year can be directly attributed to Black Lives Matter.","Cutting the top marginal tax bracket will increase the average working class salary by at least $ NUM per year","At least NUM of John Podesta's emails contain evidence of satanic pizza treason.", "Over NUM scientists agree that global warming was invented by China to take our jobs.", "TRUMP is pleased to announce that the Border Wall will be entirely funded by a personal donation of $ NUM from Former President Vicente Fox.","TRUMP is pleased to announce that import taxes on Mercedes and BMW have created over NUM jobs for AMERICAN carriage-makers and stableboys. MAKE HORSES GREAT AGAIN #MHGA"];
+	var item = items[Math.floor(Math.random()*items.length)];
+	var num = Math.floor(Math.random()*10000000) + 100000;
+	var fact = item.replace("NUM",num.toString());
+	document.getElementById("fact").innerHTML = fact;	
+}
+</script>
+</body>
+</html>
