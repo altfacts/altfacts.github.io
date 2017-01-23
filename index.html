@@ -32,7 +32,7 @@ function getFact() {
 ""];
 	var item = items[Math.floor(Math.random()*items.length)];
 	var num = Math.floor(Math.random()*10000000) + 100000;
-	var fact = item.replace("NUM",num.toString());
+	var fact = item.replace("NUM",num.toLocaleString());
 	document.getElementById("fact").innerHTML = fact;	
 }
 </script>
